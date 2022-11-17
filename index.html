@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarcolinoClubeFilmes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Concert One', cursive;
+        }
+
+        body {
+            background-color: rgba(165, 42, 42, 0.24);
+        }
+
+        header {
+            background-image:url("imgs/Degrade-Radial-1024x576.jpg");
+            padding-top: 10px;
+            position:sticky;
+            top: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        header h1, header h3 {
+            color:#fff;
+            font-style: italic;
+            width: 450px;
+            padding: 0;
+            margin-bottom:0;
+            margin-right: 900px;
+        }
+        
+        .btn img {
+            height:20px;
+        }
+
+        .btn {
+            float: right;
+            font-size: 18px;
+            width: 200px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .direita {
+            float: right;
+            width: 300px;
+            border-left: 5px solid brown;
+            text-align: center;
+            margin-left: 105px;
+            padding-left: 45px;
+            margin-top:50px;
+        }
+
+        .direita img {
+            width: 225px;
+        }
+
+        .direita h2 {
+            width: 200px;
+            color: brown;
+        }
+
+        #em-cartaz img{
+            width:200px;
+            height: 250px;
+        }
+
+        #promocao img {
+            width: 100%;
+            height: 300px;
+        }
+
+        #promocao {
+            align-items: center;
+        }
+
+        .carousel-inner img {
+            max-width: 100%;
+            height: 450px;
+            border-bottom: 5px solid brown;
+            padding-bottom: 4em;
+            margin-bottom: 4em;
+        }
+
+        .navbar li a{
+            color: #FFF;
+        }
+
+        header .navbar {
+            border-bottom: 2px solid #FFF;
+            text-align: center;
+        }
+
+        .container-cartaz h1, .container-cartaz h2 {
+            text-align: center;
+        }
+
+        #redes img {
+            width: 30px;
+            height: 30px;
+            margin-left: 40px;
+        }
+
+        #redes li a {
+            color: brown;
+            font-size: 20px;
+        }
+        .card-img-overlay:hover {
+            background-color: rgba(165, 42, 42, 0.404);
+            cursor:pointer;
+        }
+        .card-img-overlay a {
+            display:none;
+        }
+
+        .card-img-overlay:hover a {
+            display:block;
+            width: 170px;
+            margin-top: 50px;
+        }
+
+        form h1 {
+            border-bottom: 2px solid #fff;
+            width: 460px;
+            font-size: 3em;
+        }
+
+        .btnlupa .btn {
+                width: 60px;
+        }
+
+
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .direita {
+                width: 200px;
+                margin-left: 15px;
+                padding-left: 20px;
+                margin-right: 15px;
+            }
+
+            .carousel-inner img {
+                height: 350px;
+            }
+
+            .container-h1 h1 {
+                font-size: 3em;
+            }
+
+            .container-cartaz {
+                text-align: center;
+            }
+
+            .container-cartaz img, .card-img-overlay {
+                margin-left: 7em;
+            }
+
+            .direita img {
+                width: 190px;
+            }
+
+            form h1 {
+                width: 100%;
+                font-size: 35px;
+            }
+
+            .btnlupa .btn {
+                width: 50px;
+            }
+
+        } 
+
+        @media screen and (max-width: 767px) {
+            .direita {
+                display: none;
+            }
+
+            .container-cartaz img, .card-img-overlay {
+                margin-left: 3em;
+                max-width: 100%;
+            }
+
+            .container-cartaz a {
+                padding: 3px;
+            }
+
+
+            .container-promocao h1 {
+                max-width: 460px;
+            }
+
+            .container-promocao .col-sm-12 {
+                margin-bottom: 30px;
+            }
+
+            .carousel-inner img {
+                height: 300px;
+            }
+
+            header {
+                position:relative;
+            }
+
+            form h1 {
+                width: 300px;
+                font-size: 2em;
+                margin-right: 20px;
+                margin: 0 auto;
+            }
+
+            form input {
+                width: 150px;
+                padding: 3px;
+            }
+
+            .btnlupa .btn {
+                width: 60px;
+                margin-bottom: 5px;
+            }
+
+            .collapse .btn {
+                width: 70px;
+                padding: 2px;
+            }
+
+            .container-h1 h1 {
+                font-size: 28px;
+            }
+
+            .container-promocao a {
+                padding: 3px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <header id="roll">
+        <div class="container">
+            <form class="form">
+                <div class="collapse collapse-horizontal" style="float:right " id="busca">
+                    <div class="btn-group">
+                        <input type="text" placeholder="O que procura?"style="text-align:center;">
+                        <button class="btn btn-primary btn-sm" type="button" style="width:80px">
+                            Buscar 
+                        </button>
+                    </div>
+                </div>
+                <div class="btnlupa">
+                    <button class="btn btn-link btn-sm "data-bs-toggle="collapse" data-bs-target="#busca" type="button">
+                        <img src="./imgs/icons-g0bb81578f_640.png" alt="Imagem de uma lupa" />
+                    </button>
+                </div>
+                <h1>MarcolinoClubeFilmes </h1>
+            </form>
+            
+        </div>
+
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon" style="background-color:#fff; border-radius: 5px;"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-center" id="menu">
+                    <ul class="nav navbar-nav nav-pills" style="margin-top: 10px">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#em-cartaz">Em Cartaz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#promocao">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+    <div class="container container-h1">
+        <div class="direita">
+            <div class="col-sm-12 col-lg-3">
+                <h2 class="display-6">Em Breve</h2>
+                <img src="./imgs/em_breve1.jpg" style="border-radius: 10px"/>
+                <h2 style="font-size:20px; margin-bottom: 3em">Vingadores: Guerras Secretas</h2>
+                <img src="./imgs/homem_formiga_embreve.jpg" style="border-radius: 10px"/>
+                <h2 style="font-size:20px; margin-bottom: 3em">Homem Formiga e a Vespa: Quantumania</h2>
+                <img src="./imgs/john_wick_embreve.webp" style="border-radius: 10px"/>
+                <h2 style="font-size:20px; margin-bottom: 3em">John Wick 4: Baba Yaga</h2>
+                <img src="./imgs/avatar2_embreve.jpg" style="border-radius: 10px"/>
+                <h2 style="font-size:20px; margin-bottom: 3em">Avatar 2: O Caminho da Àgua</h2>
+            </div>
+        </div>
+
+        
+        <h1 class="display-3 pt-4 mt-5" style="text-align:center">Filmes em Destaque</h1>
+        <div class="col-12">
+            <div class="row">
+            <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img class="d-block w-100" src="./imgs/Pantera-Negra-2-Shuri.jpg" alt="Pôster do filme Pantera Negra"/>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="./imgs/Adao_negro.jpg" alt="Pôster do filme Adão Negro"/>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="./imgs/Lilo_lilo_crocodilo.jpg" alt="Pôster do filme Lilo Lilo Crocodilo"/>
+                    </div>
+                </div>
+                <button data-bs-target="#carousel-exemplo"data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon" style="margin-bottom:8em"></span>
+                </button>
+                <button data-bs-target="#carousel-exemplo"data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon" style="margin-bottom:8em"></span>
+                </button>
+                <div class="carousel-indicators" style="margin-bottom: 150px">
+                    <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-bs-spy="scroll" data-bs-target="#roll">
+    <section id="em-cartaz">
+        <div class="container container-cartaz">
+            <h1 class="display-6" style="margin-bottom: 20px">Em Cartaz:</h1>
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 mb-5">
+                    <div class="col-sm-12 col-lg-4 col-md-6">
+                        <div class="card text" style="width: 200px; border:none; background-color: rgba(165, 42, 42, 0)">
+                            <img src="./imgs/adao_negro_card1.jpg" style="border-radius: 10px" />
+                            <div class="card-img-overlay" style="width:200px;">
+                                <h4 class="card-title"></h4>
+                                <h5 class="card-subtitle"></h5>
+                                <a href="#" class="btn btn-primary">Sinopse e Trailer</a>
+                                <a href="#" class="btn btn-danger">Sessôes e Horários</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="m-3" style="font-size: 30px; color:brown;">Adão Negro</h2>
+                    
+                </div>
+                <div class="col-sm-12 col-lg-4 mb-5">
+                    <div class="col-sm-12 col-lg-4 col-md-6">
+                        <div class="card text" style="width: 200px; border:none; background-color: rgba(165, 42, 42, 0);">
+                            <img src="./imgs/pantera_negra_card2.webp" style="border-radius: 10px" />
+                            <div class="card-img-overlay" style="width:200px;">
+                                <h4 class="card-title"></h4>
+                                <h5 class="card-subtitle"></h5>
+                                <a href="#" class="btn btn-primary">Sinopse e Trailer</a>
+                                <a href="#" class="btn btn-danger">Sessôes e Horários</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="m-3" style="font-size: 25px; color:brown;">Pantera Negra: Wakanda pra Sempre</h2>
+                </div>
+                <div class="col-sm-12 col-lg-4 mb-5">
+                    <div class="col-sm-12 col-lg-4 col-md-6">
+                        <div class="card text" style="width: 200px; border:none; background-color: rgba(165, 42, 42, 0);">
+                            <img src="./imgs/lilo-lilo-crocodilo_card3.jpg.crdownload" style="border-radius: 10px" />
+                            <div class="card-img-overlay" style="width:200px; height:250px;">
+                                <h4 class="card-title"></h4>
+                                <h5 class="card-subtitle"></h5>
+                                <a href="#" class="btn btn-primary">Sinopse e Trailer</a>
+                                <a href="#" class="btn btn-danger">Sessôes e Horários</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="m-4" style="font-size: 30px; color:brown;">Lilo, Lilo, Crocodilo</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="promocao">
+            <div class="container container-promocao">
+                <div class="row">
+                    <div class="col-12 mb-5" style="width: 100%; padding-right:35px">
+                        <h1 class="display-6" style="text-align:center; padding-bottom: 20px;">Promoções:</h1>
+                        <div class="card text-bg-dark" style="text-align:center">
+                            <div class="card-header">
+                                <h3>OFERTA DA SEMANA</h3>
+                            </div>
+                            <img src="./imgs/cinema_promo2.jpeg" />
+                            <div class="card-body">
+                                <h4 class="card-title">Vem que ainda dá tempo!</h4>
+                                <a href="#" class="btn btn-primary" style="align-items:center">Consultar localidades</a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row pb-3">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="card text-bg-dark" style="text-align:center">
+                                    <div class="card-header">
+                                        <h3>Combo WAKANDA PRA SEMPRE</h3>
+                                    </div>
+                                    <img src="./imgs/combo_pantera_negra.jpg" />
+                                    <div class="card-body">
+                                        <h4 class="card-title">Peça já o seu!</h4>
+                                        <h5 class="card-subtitle" style="color:red">R$ 75,90</h5>
+                                        <p class="card-text m-1">
+                                            *Oferta válida enquanto o filme estiver em cartaz, imagem meramente ilustrativa</p>
+                                        <a href="#" class="btn btn-primary">Comprar agora</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="card text-bg-dark" style="text-align:center;">
+                                <div class="card-header">
+                                    <h3>Mega Combo Adão Negro PLUS</h3>
+                                </div>
+                                <img src="./imgs/adao_negro_promocao.webp" style="height:300px" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Garanta já!</h4>
+                                    <h5 class="card-subtitle" style="color:red">R$ 85,50</h5>
+                                    <p class="card-text m-1">
+                                        *Oferta válida enquanto o filme estiver em cartaz, imagem meramente ilustrativa</p>
+                                    <a href="#" class="btn btn-primary">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+            <section id="contato">
+                <h1 class="display-6 mb-4 mt-5 pt-5" style="text-align: center; border-top: 5px solid brown">Fale Conosco</h1>
+                <div class="navbar navbar-expand-lg">
+                    <div class="container" style="justify-content:center">
+                        <nav id="redes">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item d-flex" style="align-items: center";>
+                                    <img src="./imgs/facebook.jpg" alt="logotipo do facebook" />
+                                    <a class="nav-link" href="#" title="Acompanhe nossa página no Facebook">facebook.com/marcocine</a>
+                                </li>
+                                <li class="nav-item d-flex" style="align-items: center";>
+                                    <img src="./imgs/instagram.png" alt="logotipo do instagram" />
+                                    <a class="nav-link" href="#" title="Acompanhe-nos no Instagram">instagram.com/marcocine</a>
+                                </li>
+                                <li class="nav-item d-flex" style="align-items: center";>                               
+                                    <img src="./imgs/youtube.png" alt="logotipo do youtube" />
+                                    <a class="nav-link" href="#" title="Siga-nos no Youtube">youtube.com/marcocine</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+    </div>
+</div>
+
+    <footer style="padding:16px; color: #FFF; background-color: brown; text-align: center; margin-top: 15px; background-image:url(https://www.ericssobral.com.br/wp-content/uploads/2021/03/Degrade-Radial-1024x576.jpg);">
+        <h3 class="display-7">Copyright &copy 2022 MarcolinoClubeFilmes </h3>
+        <h3 class="display-7">- Todos os direitos reservados </h3>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
